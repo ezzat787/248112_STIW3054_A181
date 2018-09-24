@@ -12,14 +12,13 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        System.out.println("running...");
-        
+
+        System.out.println("running..." + Thread.currentThread().toString());
+        System.out.println("max priority is = " + Thread.MAX_PRIORITY);
+        System.out.println("min priority is = " + Thread.MIN_PRIORITY);
+
     }
-     public void run(int x) {
-        System.out.println("running2...");
-        
-    }
- 
+
     public static void main(String args[]) {
         MyThread t1 = new MyThread();
         MyThread t2 = new MyThread();
